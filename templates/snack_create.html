@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create Snack
+{% endblock %}
+
+{% block content %}
+<h1>Welcome To Create Snack Page</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{form.as_table}}
+    <input type="submit" value="Create">
+</form>
+
+{% endblock %}
